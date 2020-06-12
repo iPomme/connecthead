@@ -9,14 +9,17 @@ namespace Audio
         
         [SerializeField] private AudioSource audioSource;
         [SerializeField]  private float minimumLevel = .0001f;
-        float[] clipSampleData = new float[1024];
+        float[] clipSampleData = new float[4096];
+
+        [SerializeField] private float maxValue;
+        [SerializeField] private float averageValue;
 
         private string _device;
         private void Start()
         {
             if (_device == null) _device = Microphone.devices[0];
-            audioSource.clip = Microphone.Start(_device, true, 60, 16000);
-            while (!(Microphone.GetPosition(null) > 0))
+            audioSource.clip = Microphone.Start(_device, true, 3000, 16000);
+            while (!(Microphone.GetPosition(_device) > 0))
             {
             }
 
@@ -26,13 +29,18 @@ namespace Audio
         private void Update()
         {
             audioSource.GetSpectrumData(clipSampleData, 0, FFTWindow.Rectangular);
-            float calculatedValue = clipSampleData.Max();
 
-            if (calculatedValue > minimumLevel)
+            maxValue = clipSampleData.Max();
+            averageValue = clipSampleData.Average();
+            var diff = maxValue - averageValue;
+            Logger.DebugFormat("diff = {0} ", diff);
+
+            if (diff > minimumLevel)
             {
                 Logger.DebugFormat("BANG!!!");
+
             }
-            
+
         }
     }
 }
