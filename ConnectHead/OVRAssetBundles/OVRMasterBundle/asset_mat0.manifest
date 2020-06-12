@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 3348838942
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a173cbfac8d2141e1ff09fe0cbae5c1f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 10a6a558690295dadb3dd990eda0821a
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Materials/yellow.mat
+- Assets/Materials/mailBox_focus.mat
+- Assets/Materials/blue.mat
+- Assets/Materials/orange.mat
+- Assets/Materials/mailBox_main.mat
+- Assets/Materials/red.mat
+Dependencies: []
