@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HandTrackingTest.unity
-    guid: 14c1fb1018d0c42b38f081d2e89370f3
+    path: Assets/Scenes/HandTrackingCustom_Test.unity
+    guid: 2c9cf75ea356d4c8480e899e7c900ee5
   - enabled: 1
-    path: Assets/Oculus/SampleFramework/Usage/CustomHands.unity
-    guid: a4f984fcee593d2418cc61f4a993d46d
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/CustomHands Olivier.unity
+    guid: 8f751c94ff7984c7c85cb26778c2b596
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a2cf45f930c1c4fb0b02d8e29b56ed79,
       type: 2}
